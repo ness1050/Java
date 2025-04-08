@@ -9,17 +9,40 @@ public class Basic {
         //System.out.println(b.task1());
         //b.task2();
         int a = 96;
-        int c = -2;
+        double c = (float)(3.3);
         //b.arthimetic(a, c);
         //b.swap(a, c);
         //b.temp();
         //b.bitwise(a, c);
+        b.areaOfCircle(c);
 
         if (a % 2 == 0) {
             System.out.println("number is Even");
         } else {
             System.out.println("Number is odd");
         }
+    }
+
+    // Integer converter to binary, octal, hexadecimal with inbuilt functions
+    public void Converter(int n) {
+        String binary = Integer.toBinaryString(n);
+        String hexa = Integer.toHexString(n);
+        String octal = Integer.toOctalString(n);
+
+        System.out.println("The Integer in binray is: " + binary);
+        System.out.println("The Intger to hexadecimal is : " + hexa);
+        System.out.println("The Integer number to octal is: " + octal);
+    }
+
+    public double areaOfCircle(double r) {
+
+        double f = (float)(2 * 3.14 * r);
+        double area = (float)(3.1416 * Math.pow(r, 2));
+        System.out.println("Circumance of Circle C = 2pi*r" + f);
+        System.out.println("-----------------------------");
+        System.out.println( "Area of Cirkle A = pi*r^2: " + area);
+        
+        return f;
     }
 
 
@@ -34,6 +57,8 @@ public class Basic {
             System.out.println("Only one condition is true but requires both to be true or false");
         }
     }
+
+    // Converting From Celsiuse to Farenheit 
     public void temp() {
         Scanner scan = new Scanner(System.in);
 
@@ -45,6 +70,7 @@ public class Basic {
         }
     }
     
+    // Swaping values
     public void swap(int a , int b) {
         System.out.println("a = " + a);
         System.out.println("b = " + b);
@@ -54,10 +80,11 @@ public class Basic {
         a = b -  a;
         System.out.println(a);
         System.out.println(b);
-        
-        
     }
 
+    /*
+     * Performing Arthemethic Operations
+     */
     public void arthimetic(int a , int b) {
 
         int sum = a + b;
