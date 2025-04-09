@@ -6,8 +6,11 @@ public class ControlFlow {
         int number = 11;
         ControlFlow f = new ControlFlow();
 
-        f.checkIfnumberIsPrim(number);
+        //f.checkIfnumberIsPrim(number);
+        System.out.println(f.recursion(5));
     }
+
+    
 
     /**
      * Check if the number modules has a reminder of 1 or no reminder.
@@ -29,5 +32,25 @@ public class ControlFlow {
 
         return n;
 
+    }
+
+    /**
+     * Finding facotrial of a number
+     * @param n integer number
+     * @return the result of factorial
+     */
+    public int recursion(int n) {
+
+        if (n < 0 ) {
+            throw new IllegalArgumentException("Factorial is not valid");
+        }
+
+        if (n == 0) {
+            return 1;
+        }
+
+        int factorial = n * recursion(n - 1);
+      
+        return factorial;
     }
 }
